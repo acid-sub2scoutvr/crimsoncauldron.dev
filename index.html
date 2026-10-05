@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loading...</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <div class="card profile-card">
+      <img id="avatar" class="avatar" src="" alt="avatar" onclick="openLightbox(this.src)" style="cursor:pointer">
+      <div class="profile-info">
+        <div class="display-name-row">
+          <span id="display-name" class="display-name">--</span>
+          <span class="status-dot" id="status-dot"></span>
+          <span class="status-label" id="status-label"></span>
+        </div>
+        <div id="username" class="username">@--</div>
+        <div id="bio" class="bio"></div>
+        <div id="location" class="meta-row"></div>
+        <div id="localtime" class="meta-row"></div>
+      </div>
+    </div>
+
+    <div class="card now-card" id="now-card" style="display:none">
+      <div class="now-inner">
+        <img id="now-art" src="" alt="" class="now-art">
+        <div class="now-info">
+          <div class="now-state" id="now-state">now playing</div>
+          <div class="now-title" id="now-title"></div>
+          <div class="now-artist" id="now-artist"></div>
+          <div class="now-ascii-bar" id="now-ascii-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card stats-card">
+      <div class="stat">
+        <span class="stat-val" id="stat-repos">--</span>
+        <span class="stat-key">repos</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-val" id="stat-stars">--</span>
+        <span class="stat-key">stars</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-val" id="stat-followers">--</span>
+        <span class="stat-key">followers</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-val" id="stat-following">--</span>
+        <span class="stat-key">following</span>
+      </div>
+    </div>
+
+    <div class="card drop-card" id="socials-card">
+      <button class="drop-header" onclick="toggleDrop('socials')" aria-expanded="false">
+        <span class="drop-label">socials</span>
+        <span class="drop-arrow" id="arrow-socials">v</span>
+      </button>
+      <div class="drop-body" id="body-socials" aria-hidden="true">
+        <div id="socials-list"></div>
+      </div>
+    </div>
+
+    <div class="card drop-card" id="contacts-card">
+      <button class="drop-header" onclick="toggleDrop('contacts')" aria-expanded="false">
+        <span class="drop-label">contact</span>
+        <span class="drop-arrow" id="arrow-contacts">v</span>
+      </button>
+      <div class="drop-body" id="body-contacts" aria-hidden="true">
+        <div id="contacts-list"></div>
+      </div>
+    </div>
+
+    <div class="card drop-card" id="crypto-card">
+      <button class="drop-header" onclick="toggleDrop('crypto')" aria-expanded="false">
+        <span class="drop-label">monetary</span>
+        <span class="drop-arrow" id="arrow-crypto">v</span>
+      </button>
+      <div class="drop-body" id="body-crypto" aria-hidden="true">
+        <div id="crypto-list"></div>
+      </div>
+    </div>
+
+    <div class="card act-card">
+      <div class="act-title">activity</div>
+      <div id="activity-list">
+        <div class="act-item"><span class="act-dot">.</span><span class="act-text muted">fetching...</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">x</button>
+    <img id="lightbox-img" src="" alt="avatar">
+  </div>
+
+  <script src="script.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"6c277fb5e2de4c7895e60dcdfef36564","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
